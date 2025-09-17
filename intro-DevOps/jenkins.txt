@@ -1,0 +1,19 @@
+Docker and Kernel
+=================
+What is the fundamental difference between a VM and a container?
+in this Question, the magic word is Kernel
+
+Each VM has its own Kernel and container all share one.
+Sharing a Kernel in a resource isolated mode, is the fundamental trues about a container
+
+
+| Feature             | **Virtual Machine (VM)**                                   | **Container**                                         |
+| ------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| **Kernel**          | Each VM has its **own Kernel**                             | All containers **share the host's Kernel**            |
+| **Isolation level** | Full hardware-level isolation (via hypervisor)             | Process-level isolation (namespaces, cgroups)         |
+| **Boot Time**       | Slower (OS needs to boot)                                  | Faster (just a process start)                         |
+| **Overhead**        | Higher (needs guest OS)                                    | Lightweight (no guest OS, shares host resources)      |
+| **Use Case**        | Useful for running different OS types or full environments | Ideal for microservices, fast deployment, and scaling |
+
+What is a Kernel
+its the core part of an operating system. It acts as a bridge between your hardware and software.
